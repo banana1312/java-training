@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+	<title>chap4.s3.q1</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../../../../docs/bootstrap-4.3.1-dist/css/bootstrap.min.css">
+	<script src="../../../../docs/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container" style="max-width:800px;">
+		<div class="row">
+			<div class="col-12">
+				<h2>Java基礎 実習問題</h2>
+				<h5>【基本問題】 chap4.s3.q1</h5>
+				<br>
+				<h5>■ 実習概要</h5>
+				<pre style="white-space:pre-wrap; border: 0;">
+クラスの集約関係と操作の委譲を利用して図書館と本を扱うプログラムを作成します。
+
+</pre>
+				<h5>■ 実習内容</h5>
+				<pre style="white-space:pre-wrap; border: 0;">
+Libraryクラスを全体、Bookクラスを部分として1対1の集約関係を定義します。
+StartUpクラスのmain()メソッドから利用します。
+
+</pre>
+				<h5>■ 実習データ</h5>
+				<pre style="white-space:pre-wrap; border: 0;">
+Book.java (作成済み)
+Library.java (一部作成済み)
+StartUp.java (作成済み)
+ ※提供ソースコードは、必要に応じてコメントを外してください。
+
+</pre>
+				<h5>■ 実習手順</h5>
+				<pre style="white-space:pre-wrap; border: 0;">
+Libraryクラス
+1.名前のメンバ変数name(String)を宣言する。
+2.住所のメンバ変数address(String)を宣言する。
+3.電話番号のメンバ変数tel(String)を宣言する。
+4.本のメンバ変数book(Book)を宣言する(集約)。
+5.名前、住所、電話番号、本を引数に受け取るコンストラクタを定義する。
+6.図書館情報を表示するshowInfo()メソッドを定義する。
+7.書籍情報を表示するshowBook()メソッドを定義する(操作の委譲)。
+
+</pre>
+				<h5>■ 実行イメージ</h5>
+				<pre style="white-space:pre-wrap; border: 0;">
+<図書館情報>
+図書館名:天空図書館
+住所    :東京都千代田区天空町1-1-1
+電話番号:999-9876-1234
+
+<書籍情報>
+書籍名:Python
+著者:  山口ヒロシ
+単価:  2500
+
+</pre>
+				<h5>■ 分析クラス図</h5>
+				<div class="mx-5 my-3">
+					<img class="my-3 img-fluid" src="docs/ana_class_diagram.png">
+				</div>
+				<div style="page-break-after: always;"></div>
+
+				<h5>■ 分析シーケンス図</h5>
+				<div class="mx-5 my-3">
+					<img class="my-3 img-fluid" src="docs/ana_sequence_diagram.png">
+				</div>
+				<h5>■ 設計クラス図</h5>
+				<div class="mx-5 my-3">
+					<img class="my-3 img-fluid" src="docs/class_diagram.png">
+				</div>
+				<div style="page-break-after: always;"></div>
+
+				<h5>■ 設計シーケンス図</h5>
+				<div class="mx-5 my-3">
+					<img class="my-3 img-fluid" src="docs/sequence_diagram.png">
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
