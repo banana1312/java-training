@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="jp">
 <head>
-	<title>chap4.s3.q4</title>
+	<title>chap2.s6.q5</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../../../../docs/bootstrap-4.3.1-dist/css/bootstrap.min.css">
@@ -12,67 +12,68 @@
 		<div class="row">
 			<div class="col-12">
 				<h2>Java基礎 実習問題</h2>
-				<h5>【定着問題】 chap4.s3.q4</h5>
+				<h5>【実践問題】 chap2.s6.q5</h5>
 				<br>
 				<h5>■ 実習概要</h5>
 				<pre style="white-space:pre-wrap; border: 0;">
-クラスの集約関係と操作の委譲を利用して家の図形を扱うプログラムを作成します。
+データを並べ替えるプログラムを作成します。
 
 </pre>
 				<h5>■ 実習内容</h5>
 				<pre style="white-space:pre-wrap; border: 0;">
-HouseShapeクラスを全体、TriangleクラスとRectangleクラスを部分として集約関係を定義します。
-StartUpクラスのmain()メソッドから利用します。
+クイックソートを利用し、配列の要素を並び替えます。
+
+</pre>
+				<h5>■ 実践問題のポイント</h5>
+				<pre style="white-space:pre-wrap; border: 0;">
+ヒントのpartition()メソッドの処理概要をもとに、クイックソートのアルゴリズムを実装します。
+クイックソート、Mathクラスを利用して乱数を発生させる方法、メソッドの再帰的呼び出しを調査し、
+実装します。
 
 </pre>
 				<h5>■ 実習データ</h5>
 				<pre style="white-space:pre-wrap; border: 0;">
-HouseShape.java (一部作成済み)
-Triangle.java (作成済み)
-Rectangle.java (作成済み)
-StartUp.java (一部作成済み)
+QuickSort.java (コメントをヒントに作成)
+ ※提供ソースコードは、必要に応じてコメントを外してください。
 
 </pre>
 				<h5>■ 実習手順</h5>
 				<pre style="white-space:pre-wrap; border: 0;">
-1.クラス図、シーケンス図をもとに、実行イメージのプログラムを作成する。
+QuickSortクラス
+1.要素数10のint型の配列を宣言する。
+2.配列の要素を乱数で初期化する。
+  (Mathクラスのrandom()メソッドを利用する。)
+3.クイックソートを実行する。
+  (quick_sort()メソッドを利用する。)
+4.配列の要素を表示する。
 
 </pre>
 				<h5>■ 実行イメージ</h5>
 				<pre style="white-space:pre-wrap; border: 0;">
-(家の図形の情報)
-
-(屋根の図形)
-    底辺:10
-    高さ:20
-    面積:100
-
-(壁の図形)
-    幅:20
-    高さ:30
-    面積:600
+13 44 44 52 60 61 77 84 92 97
 
 </pre>
-				<h5>■ 分析クラス図</h5>
-				<div class="mx-5 my-3">
-					<img class="my-3 img-fluid" src="docs/ana_class_diagram.png">
-				</div>
 				<div style="page-break-after: always;"></div>
 
-				<h5>■ 分析シーケンス図</h5>
-				<div class="mx-5 my-3">
-					<img class="my-3 img-fluid" src="docs/ana_sequence_diagram.png">
+				<h5>■ ヒント</h5>
+				<div class="my-3">
+					<img class="my-3 img-fluid" src="docs/hint.png">
 				</div>
-				<h5>■ 設計クラス図</h5>
-				<div class="mx-5 my-3">
-					<img class="my-3 img-fluid" src="docs/class_diagram.png">
-				</div>
-				<div style="page-break-after: always;"></div>
+				<pre style="white-space:pre-wrap; border: 0;">
+＜partition()メソッドの処理概要＞
+ピボットをhighの値で初期化する。
+変数iをlow-1で初期化する。
 
-				<h5>■ 設計シーケンス図</h5>
-				<div class="mx-5 my-3">
-					<img class="my-3 img-fluid" src="docs/sequence_diagram.png">
-				</div>
+変数jのループは、ピボットより小さい値の要素を探す。
+(変数jは、lowからhigh-1まで移動させる。)
+ピボットより小さい値の要素が見つかったら変数iに1を足し、i番目とj番目の要素と交換する。
+
+変数iは最終的に、ピボットより値の小さい要素のうちの最も大きい要素番号を指している。
+ピボットとi+1の要素を交換する。
+
+ピボットを中心に、ピボットより小さい要素とピボット以上の要素に分かれる。
+
+</pre>
 			</div>
 		</div>
 	</div>
